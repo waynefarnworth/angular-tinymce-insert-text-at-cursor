@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
-  name = 'Angular';
+  name = 'Angular & TinyMCE';
   tinyMceConfig: any;
 
   ngOnInit() {
@@ -18,13 +18,16 @@ export class AppComponent implements OnInit {
     this.tinyMceConfig = {
       branding: false,
       /**
-       * This is needed to prevent console errors 
+       * This is needed to prevent console errors
        * if you're hosting your own TinyMCE
        */
       // content_css: 'assets/tinymce/skins/ui/oxide/content.min.css',
       height: 400,
       image_advtab: true,
-      imagetools_toolbar: 'rotateleft rotateright | flipv fliph | editimage imageoptions',
+      imagetools_toolbar: `
+        rotateleft rotateright |
+        flipv fliph | 
+        editimage imageoptions`,
       importcss_append: !0,
       inline: false,
       menubar: true,
